@@ -1,0 +1,37 @@
+{
+    "pages":[
+        "pages/index/index",
+        "pages/detail/detail",
+        "pages/tui/tui",
+        "pages/like/like",
+        "pages/mycenter/mycenter"
+    ],
+    "window":{
+        "navigationBarBackgroundColor": "#FFFF2C",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "百思不得姐"
+    },
+    "tabBar": {
+      "list": [{
+        "pagePath": "pages/index/index",
+        "text": "精华",
+        "iconPath": "iconPath",
+        "selectedIconPath": "selectedIconPath"
+      },{
+        "pagePath": "pages/tui/tui",
+        "text": "推荐关注",
+        "iconPath": "iconPath",
+        "selectedIconPath": "selectedIconPath"
+      },{
+        "pagePath": "pages/like/like",
+        "text": "关注",
+        "iconPath": "iconPath",
+        "selectedIconPath": "selectedIconPath"
+      },{
+        "pagePath": "pages/mycenter/mycenter",
+        "text": "我的",
+        "iconPath": "iconPath",
+        "selectedIconPath": "selectedIconPath"
+      }]
+    }
+}

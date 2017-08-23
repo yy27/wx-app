@@ -1,0 +1,24 @@
+<!--pages/tui/tui.wxml-->
+<view class="wrap">
+<view class="left-nav">
+    <scroll-view scroll-y="true">
+        <view wx:for="{{leftNav}}" wx:key="" data-id="{{item.id}}" bindtap="changeRightNav" class="nav {{active?'on':''}}">{{item.name}}</view>
+    </scroll-view>
+</view>
+<view class="right-nav">
+    <scroll-view scroll-y="true">
+        <view wx:for="{{rightNav}}" wx:key="" >
+        <view class="user-wrap">
+            <view class="user-box">
+                <view class="profile"><image src="{{item.header}}"></image></view>
+                <view class="name">
+                    <text>{{item.screen_name}}</text>
+                </view>
+                <view class="guan"><text>+关注</text></view>
+            </view>
+            <view class="jieshao">{{item.introduction}}</view>
+        </view>
+        </view>
+    </scroll-view>
+</view>
+</view>

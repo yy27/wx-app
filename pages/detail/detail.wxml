@@ -1,0 +1,36 @@
+<!--pages/detail/detail.wxml-->
+<import src="/template/video.wxml" />
+<import src="/template/image.wxml" />
+<import src="/template/duanzi.wxml" />
+<import src="/template/audio.wxml" />
+<view class="detail-con">
+    <block wx:if="{{datatype=='41'}}">
+        <template is="video_tem" data="{{item}}"></template>
+    </block>
+    <block wx:if="{{datatype=='10'}}">
+        <template is="image_tem" data="{{item}}"></template>
+    </block>
+    <block wx:if="{{datatype=='29'}}">
+        <template is="duan_tem" data="{{item}}"></template>
+    </block>
+    <block wx:if="{{datatype=='31'}}">
+        <template is="audio_tem" data="{{item}}"></template>
+    </block>
+</view>
+<view class="comment-box" wx:for="{{ comment }}" wx:key="" wx:for-item="comment">
+    <view class="c-top">
+        <view class="title-img">
+            <image src="{{ comment.user.profile_image }}" class="profile"></image>
+            <view class="sex">
+                <block wx:if="{{comment.user.sex == 'm'}}"><image src="../../images/man.png"></image></block>
+                <block wx:if="{{comment.user.sex == 'f'}}"><image src="../../images/woman.png"></image></block>
+            </view>
+        </view>
+        <view class="user-name"><text class="time cddd">{{ comment.user.username }}</text><text class="time">{{comment.ctime}}</text></view>
+        <view class="zan">{{ comment.like_count <=0 ? '+1':comment.like_count }}<text class="iconfont icon-good"></text></view>
+    </view>
+    <view class="c-text">
+        <text>{{comment.content }}</text>
+        <block wx:if="{{comment.precmt.length!='0'}}">//<text class="replay">{{'@'+comment.precmt.user.username}}</text>{{'：'+comment.precmt.content}}</block>
+    </view>
+</view>

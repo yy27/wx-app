@@ -1,0 +1,25 @@
+<template name="duan_tem">
+<view bindtap="goTo" data-id="{{ item.id }}" data-profile="{{ item.profile_image }}" data-name="{{ item.name}}" data-time="{{ item.create_time }}" data-content="{{ item.text }}" data-url="" data-num="{{item.love+'/'+item.hate+'/'+item.repost+'/'+item.comment}}" data-type="{{item.type}}" data-width="{{item.width}}" data-height="{{item.height}}">
+<view class="top">
+                <view class="face"><image src="{{ item.profile_image }}"></image></view>
+                <view class="name">
+                    <view>{{ item.name}}</view>
+                    <text class="time">{{ item.create_time }}</text>
+                </view>
+            </view>
+            <view class="content">
+                <view class="title">{{ item.text }}</view>
+            </view>
+            </view>
+            <view class="bottom">
+                <text class="b-num"><text class="iconfont icon-good"></text>{{item.love}}</text>
+                <text class="b-num"><text class="iconfont icon-bad"></text>{{item.hate}}</text>
+                <view bindtap="goTo" data-id="{{ item.id }}" data-profile="{{ item.profile_image }}" data-name="{{ item.name}}" data-time="{{ item.create_time }}" data-content="{{ item.text }}" data-url="" data-num="{{item.love+'/'+item.hate+'/'+item.repost+'/'+item.comment}}" data-type="{{item.type}}" data-width="{{item.width}}" data-height="{{item.height}}" class="b-num">
+                    <text><text class="iconfont icon-process"></text>{{item.repost}}</text>
+                </view>
+                <view bindtap="goTo" data-id="{{ item.id }}" data-profile="{{ item.profile_image }}" data-name="{{ item.name}}" data-time="{{ item.create_time }}" data-content="{{ item.text }}" data-url="" data-num="{{item.love+'/'+item.hate+'/'+item.repost+'/'+item.comment}}" data-type="{{item.type}}" data-width="{{item.width}}" data-height="{{item.height}}" class="b-num">
+                    <text><text class="iconfont icon-comments"></text>{{item.comment}}</text>
+                </view>
+            </view>
+            
+</template>

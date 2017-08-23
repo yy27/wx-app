@@ -1,0 +1,63 @@
+<!--pages/index/index.wxml-->
+<import src="/template/video.wxml" />
+<import src="/template/image.wxml" />
+<import src="/template/duanzi.wxml" />
+<import src="/template/audio.wxml" />
+<view class="nav">
+    <view class="nav-box" wx:for="{{ nav }}" wx:key="">
+        <text bindtap="changeNav" data-url='{{item.url_type}}' data-index="{{ item.index }}" class="{{current==item.index?'on':''}}">{{ item.name }}</text>
+    </view>
+</view>
+<swiper bindchange="changeCurrent" current="{{ current }}" data-currenttype="{{currentType}}">
+    <swiper-item>
+        <scroll-view scroll-y="true" bindscrolltolower="showMore">
+        <view class="block" wx:for="{{ allList }}" wx:key="">
+            <block wx:if="{{item.type==41}}">
+                <template is="video_tem" data="{{item}}"></template>
+            </block>
+            <block wx:if="{{item.type==10}}">
+                <template is="image_tem" data="{{item}}"></template>
+            </block>
+            <block wx:if="{{item.type==29}}">
+                <template is="duan_tem" data="{{item}}"></template>
+            </block>
+            <block wx:if="{{item.type==31}}">
+                <template is="audio_tem" data="{{item}}"></template>
+            </block>
+        </view>
+        <view class="loading">正在加载中......</view>
+        </scroll-view>
+    </swiper-item>
+    <swiper-item>
+        <scroll-view scroll-y="true" bindscrolltolower="showMore">
+            <view class="block" wx:for="{{ videoList }}" wx:key="">
+                <template is="video_tem" data="{{item}}"></template>
+            </view>
+            <view class="loading">正在加载中......</view>
+        </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" bindscrolltolower="showMore">
+            <view class="block" wx:for="{{ imgList }}" wx:key="">
+                <template is="image_tem" data="{{item}}"></template>
+            </view>
+            <view class="loading">正在加载中......</view>
+        </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" bindscrolltolower="showMore">
+            <view class="block" wx:for="{{ haList }}" wx:key="">
+                <template is="duan_tem" data="{{item}}"></template>
+            </view>
+            <view class="loading">正在加载中......</view>
+        </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" bindscrolltolower="showMore">
+            <view class="block" wx:for="{{ audioList }}" wx:key="">
+                <template is="audio_tem" data="{{item}}"></template>
+            </view>
+            <view class="loading">正在加载中......</view>
+        </scroll-view>
+    </swiper-item>
+</swiper>

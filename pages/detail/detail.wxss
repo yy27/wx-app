@@ -1,0 +1,58 @@
+/* pages/detail/detail.wxss */
+.comment-box{
+    width: 92%;
+    margin:0 4%;
+    border-bottom:1px solid #ccc;
+    padding: 2%;
+    box-sizing: border-box;
+}
+.c-top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.title-img{
+    flex: 1;
+    position: relative;
+}
+.title-img .sex{
+    position: absolute;
+    left: 60rpx;
+    top: 0rpx;
+}
+.c-top .profile{
+    width: 60rpx;
+    height: 60rpx;
+    border-radius:50%;
+    border:1px solid #ddd;
+}
+.user-name{
+    flex: 3;
+}
+.user-name text{
+    font-size: 22rpx;
+    display: block;
+}
+.sex image{
+    width: 30rpx;
+    height: 30rpx;
+}
+.zan{
+    text-align: right;
+    flex: 1;
+}
+.c-text{
+    padding:10rpx;
+    line-height: 40rpx;
+}
+.replay{
+    color: #12A0E5;
+}
+.cddd{
+    color: #555;
+}
+.detail-con{
+    padding: 3%;
+    border-bottom:10px solid #eee;
+
+}

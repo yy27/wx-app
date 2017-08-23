@@ -1,0 +1,61 @@
+/* pages/tui/tui.wxss */
+.wrap{
+    width: 100%;
+    display: flex;
+    height:100%;
+}
+.left-nav{
+    flex: 1;
+    height: 100%;
+}
+.nav{
+    text-align: center;
+    font-size: 35rpx;
+    background-color: #F7F7F7;
+    border-radius: 10rpx;
+    margin:20rpx 40rpx;
+    padding: 15rpx;
+}
+scroll-view{
+    height: 100%;
+}
+.right-nav{
+    flex: 2;
+    height: 100%;
+}
+.profile image{
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+}
+.user-wrap{
+border-bottom:1px solid #eee;
+    padding: 20rpx 0;
+}
+.user-box{
+    display: flex;
+    align-items: center;
+}
+.profile{
+    flex: 1;
+}
+.guan{
+    flex: 1;
+    text-align: right;
+    padding-right: 10rpx;
+}
+.guan text{
+    border:1px solid #efefef;
+    padding:5rpx 8rpx;
+    border-radius:10rpx;
+}
+.name{
+    flex: 3;
+}
+.name text{
+    display: block;
+}
+.jieshao{
+    color: #ddd;
+    font-size: 30rpx;
+}
