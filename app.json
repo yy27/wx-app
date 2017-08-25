@@ -15,23 +15,23 @@
       "list": [{
         "pagePath": "pages/index/index",
         "text": "精华",
-        "iconPath": "iconPath",
-        "selectedIconPath": "selectedIconPath"
+        "iconPath": "images/icon1.png",
+        "selectedIconPath": "images/icon1.png"
       },{
         "pagePath": "pages/tui/tui",
         "text": "推荐关注",
-        "iconPath": "iconPath",
-        "selectedIconPath": "selectedIconPath"
+        "iconPath": "images/icon3.png",
+        "selectedIconPath": "images/icon3.png"
       },{
         "pagePath": "pages/like/like",
         "text": "关注",
-        "iconPath": "iconPath",
-        "selectedIconPath": "selectedIconPath"
+        "iconPath": "images/icon2.png",
+        "selectedIconPath": "images/icon2.png"
       },{
         "pagePath": "pages/mycenter/mycenter",
         "text": "我的",
-        "iconPath": "iconPath",
-        "selectedIconPath": "selectedIconPath"
+        "iconPath": "images/attention.png",
+        "selectedIconPath": "images/attention.png"
       }]
     }
 }
